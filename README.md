@@ -26,3 +26,5 @@ npm run build    # production build in dist/
 ```
 
 Slide copy lives in `src/content.js`; slide layouts in `src/slides.jsx`.
+
+

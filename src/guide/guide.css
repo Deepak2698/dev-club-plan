@@ -1,0 +1,517 @@
+:root {
+  --bg: #07070b;
+  --panel: rgba(255, 255, 255, 0.035);
+  --line: rgba(255, 255, 255, 0.1);
+  --text: #f4f4f7;
+  --dim: #a1a1b3;
+  --faint: #6b6b80;
+  --red: #ff3b5c;
+  --violet: #7c5cff;
+  --cyan: #22d3ee;
+  --lime: #a3e635;
+  --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --body: 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background:
+    radial-gradient(60vmax 40vmax at 0% 0%, rgba(255, 59, 92, 0.16), transparent 60%),
+    radial-gradient(60vmax 40vmax at 100% 30%, rgba(124, 92, 255, 0.16), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+}
+.print-only {
+  display: none;
+}
+
+.g {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px 64px;
+}
+.g-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  background: rgba(7, 7, 11, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.g-brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1.15;
+  font-size: 14px;
+}
+.g-brand small {
+  display: block;
+  color: var(--dim);
+  font-size: 11px;
+}
+.g-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--red), var(--violet));
+}
+.g-nav-links {
+  display: flex;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 12px;
+  overflow-x: auto;
+}
+.g-nav-links a {
+  text-decoration: none;
+  color: var(--dim);
+  padding: 6px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.g-nav-links a:hover {
+  color: var(--text);
+  background: var(--panel);
+}
+
+.g-hero {
+  padding: 72px 0 40px;
+}
+.g-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dim);
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.g-hero h1 {
+  font-family: var(--display);
+  font-size: clamp(36px, 6vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin: 24px 0 18px;
+  max-width: 900px;
+}
+.g-grad {
+  background: linear-gradient(100deg, var(--red), var(--violet) 60%, var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.g-lede {
+  color: var(--dim);
+  font-size: 18px;
+  max-width: 720px;
+  margin: 0;
+}
+.g-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0;
+}
+.g-btn {
+  font: 500 14px var(--body);
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.g-btn:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.g-btn.primary {
+  background: var(--text);
+  color: #0a0a0f;
+  border-color: transparent;
+}
+.g-btn.small {
+  font-size: 13px;
+  padding: 8px 14px;
+  margin-top: 16px;
+}
+.g-quote {
+  margin: 8px 0 0;
+  padding: 18px 22px;
+  border-left: 3px solid var(--red);
+  background: var(--panel);
+  border-radius: 0 12px 12px 0;
+  font-family: var(--display);
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: 760px;
+}
+
+.g-section {
+  padding: 48px 0 8px;
+  scroll-margin-top: 64px;
+}
+.g-section h2 {
+  font-family: var(--display);
+  font-size: clamp(26px, 3.4vw, 36px);
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.g-num {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--red);
+}
+.g-sub {
+  color: var(--dim);
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+.g-params {
+  display: grid;
+  gap: 16px;
+}
+.g-param {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--c);
+  background: rgba(12, 12, 19, 0.7);
+  border-radius: 16px;
+  padding: 22px 24px;
+  break-inside: avoid;
+}
+.g-param-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.g-param-num {
+  font-family: var(--mono);
+  color: var(--c);
+  font-size: 13px;
+}
+.g-param h3 {
+  font-family: var(--display);
+  font-size: 24px;
+  margin: 0;
+}
+.g-means {
+  color: var(--dim);
+  margin: 6px 0 16px;
+}
+.g-cols {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+}
+.g-cols h4,
+.g-field-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c, var(--dim));
+  margin: 0 0 8px;
+}
+.g-cols ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.g-cols li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+.g-ticks {
+  list-style: none;
+  padding: 0 !important;
+}
+.g-ticks li::before {
+  content: '✓';
+  color: var(--c);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.g-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.g-role {
+  border: 1px solid var(--line);
+  background: rgba(12, 12, 19, 0.7);
+  border-radius: 14px;
+  padding: 16px 18px;
+  break-inside: avoid;
+}
+.g-role h3 {
+  font-family: var(--display);
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+.g-role ul {
+  margin: 0;
+  padding-left: 16px;
+  color: var(--dim);
+  font-size: 14px;
+}
+
+.g-prep {
+  list-style: none;
+  counter-reset: p;
+  padding: 0;
+  margin: 0 0 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+.g-prep li {
+  counter-increment: p;
+  border: 1px solid var(--line);
+  background: rgba(12, 12, 19, 0.7);
+  border-radius: 14px;
+  padding: 16px 18px 16px 56px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  break-inside: avoid;
+}
+.g-prep li::before {
+  content: counter(p, decimal-leading-zero);
+  position: absolute;
+  left: 18px;
+  top: 17px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--violet);
+}
+.g-prep span {
+  color: var(--dim);
+  font-size: 14px;
+}
+.g-dd {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.g-dd th {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.g-dd td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  width: 50%;
+}
+.g-dd td:first-child {
+  color: var(--lime);
+}
+.g-dd td:last-child {
+  color: #ff8a9a;
+}
+
+.g-sheet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.g-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--line);
+  background: rgba(12, 12, 19, 0.7);
+  border-radius: 14px;
+  padding: 16px;
+  break-inside: avoid;
+}
+.g-field-label {
+  --c: var(--cyan);
+  margin: 0;
+}
+.g-field-hint {
+  font-size: 13px;
+  color: var(--faint);
+}
+.g-field textarea {
+  margin-top: 8px;
+  width: 100%;
+  resize: vertical;
+  min-height: 96px;
+  font: 15px/1.5 var(--body);
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.g-field textarea:focus {
+  outline: 2px solid var(--violet);
+  outline-offset: 1px;
+}
+
+.g-check {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.g-check label {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(12, 12, 19, 0.7);
+  cursor: pointer;
+}
+.g-check input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--violet);
+  flex: none;
+}
+.g-check input:checked + span {
+  color: var(--faint);
+  text-decoration: line-through;
+}
+
+.g-foot {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.g-foot p {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .g-nav-links {
+    display: none;
+  }
+  .g-hero {
+    padding-top: 40px;
+  }
+  .g-cols,
+  .g-sheet {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Printable handout: light, compact, no interactive chrome. */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+  :root {
+    --text: #111;
+    --dim: #444;
+    --faint: #666;
+    --line: #d6d6de;
+    color-scheme: light;
+  }
+  body {
+    background: #fff;
+    font-size: 11pt;
+  }
+  .no-print,
+  .g-field textarea {
+    display: none !important;
+  }
+  .print-only {
+    display: block;
+  }
+  .g {
+    max-width: none;
+    padding: 0;
+  }
+  .g-hero {
+    padding: 0 0 12px;
+  }
+  .g-hero h1 {
+    font-size: 26pt;
+    margin: 12px 0 8px;
+  }
+  .g-grad {
+    color: #c4143a;
+    background: none;
+  }
+  .g-quote {
+    background: #f5f5f8;
+    font-size: 13pt;
+  }
+  .g-section {
+    padding-top: 20px;
+  }
+  .g-param,
+  .g-role,
+  .g-prep li,
+  .g-field,
+  .g-check label {
+    background: #fff;
+  }
+  .g-dd td:first-child {
+    color: #2f6b00;
+  }
+  .g-dd td:last-child {
+    color: #a0102a;
+  }
+  .g-sheet {
+    grid-template-columns: 1fr;
+  }
+  .g-field-print {
+    min-height: 26mm;
+    margin-top: 6px;
+    border-bottom: 1px dashed #bbb;
+    white-space: pre-wrap;
+  }
+  #worksheet {
+    break-before: page;
+  }
+}

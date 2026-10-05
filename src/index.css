@@ -1038,3 +1038,18 @@ kbd {
     transition: none !important;
   }
 }
+
+.closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.btn-ghost.primary {
+  background: var(--text);
+  color: #0a0a0f;
+  text-decoration: none;
+}
+.btn-ghost.primary:hover {
+  background: #fff;
+}

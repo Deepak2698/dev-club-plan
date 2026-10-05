@@ -313,7 +313,10 @@ function Closing({ go }) {
           </span>
         ))}
       </M>
-      <M variants={up}>
+      <M variants={up} className="closing-actions">
+        <a className="btn-ghost primary" href="/guide">
+          Open the prep guide & worksheet →
+        </a>
         <button className="btn-ghost" onClick={() => go(0)}>
           ↺ Start over
         </button>

@@ -515,3 +515,25 @@ a {
     break-before: page;
   }
 }
+
+.g-roles {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+.g-role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.g-seats {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--cyan);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.g-role ul li {
+  margin-bottom: 4px;
+}

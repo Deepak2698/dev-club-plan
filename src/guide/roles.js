@@ -2,21 +2,30 @@
 // Deliberately topics, not the interviewers' actual questions.
 
 export const roles = [
-  { name: 'Web Development', ready: ['How the web works, from URL to page', 'A site or page you built, and your choices', 'Performance and accessibility basics'] },
-  { name: 'App Development', ready: ['An app you built or would build', 'Choosing between native and cross-platform', 'Debugging and offline use'] },
-  { name: 'AI / ML', ready: ['Core ideas like overfitting and evaluation', 'A model or notebook you worked on', 'Where AI tools help and where they fail'] },
-  { name: 'UI/UX Design', ready: ['Your design process, brief to screen', 'A portfolio piece and what you’d redo', 'Giving and taking design critique'] },
-  { name: 'DevOps & Cloud', ready: ['What happens after git push', 'Containers, hosting, and keeping secrets safe', 'Debugging a site that is down'] },
-  { name: 'Competitive Programming', ready: ['Solving a short problem out loud', 'Your practice routine', 'Explaining an algorithm simply'] },
-  { name: 'Cybersecurity', ready: ['Common web vulnerabilities and fixes', 'CTFs or labs you have tried', 'The ethics of security work'] },
-  { name: 'Open Source', ready: ['A contribution or PR you made', 'Finding your way in a big codebase', 'Handling feedback from maintainers'] },
-  { name: 'Content & Social Media', ready: ['Pages or creators you admire, and why', 'Writing a post or caption on the spot', 'Explaining tech to non-tech students'] },
-  { name: 'Events & Operations', ready: ['An event you helped run', 'Planning checklists and timelines', 'What you do when plans fall apart'] },
-  { name: 'PR & Outreach', ready: ['Pitching the club in a minute', 'Reaching sponsors, alumni and speakers', 'Professional emails and follow-ups'] },
+  {
+    name: 'Tech',
+    seats: 2,
+    ready: ['A project you built, and the hardest bug you fixed', 'How you learn a new language or tool', 'Explaining a technical idea to a beginner', 'Thinking through a short problem out loud'],
+  },
+  {
+    name: 'Marketing',
+    seats: 1,
+    ready: ['Pages or brands you think market well, and why', 'What makes students actually show up to events', 'Writing a short post or announcement on the spot', 'How you would measure whether a campaign worked'],
+  },
+  {
+    name: 'Design',
+    seats: 1,
+    ready: ['2–3 pieces of your work, and the thinking behind them', 'A piece you would redo, and what you would change', 'Making a poster readable in two seconds', 'Taking feedback and meeting deadlines'],
+  },
+  {
+    name: 'Management',
+    seats: 1,
+    ready: ['An event or project you organized, including what went wrong', 'How you track tasks, deadlines and people', 'Handling a teammate who misses their work', 'Planning an event with a small budget and team'],
+  },
 ]
 
 export const worksheet = [
-  { id: 'domain', label: 'My domain, and why I chose it', hint: 'One honest reason, plus anything you have tried in this area.' },
+  { id: 'domain', label: 'The role I’m applying for, and why', hint: 'Tech, Marketing, Design or Management. One honest reason, plus anything you have tried.' },
   { id: 'ex1', label: 'Example 1 — a project or activity', hint: 'Situation → what I did → what happened → what I learned.' },
   { id: 'ex2', label: 'Example 2 — a mistake or challenge', hint: 'What went wrong, how I handled it, what I’d do differently.' },
   { id: 'ex3', label: 'Example 3 — something I led or organized', hint: 'Could be in college, a hobby group, volunteering, anywhere.' },

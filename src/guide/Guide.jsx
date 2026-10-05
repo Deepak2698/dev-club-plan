@@ -114,13 +114,18 @@ export default function Guide() {
           <span className="g-num">02</span> Roles in the club
         </h2>
         <p className="g-sub">
-          Part of the conversation is about the role you choose. Be ready to talk about these topics. You don’t need
-          to be an expert in all of them.
+          We are selecting 5 students across four roles. Part of the conversation is about the role you choose, so be
+          ready to talk about these topics. You can apply for more than one role.
         </p>
         <div className="g-roles">
           {roles.map((r) => (
             <div key={r.name} className="g-role">
-              <h3>{r.name}</h3>
+              <div className="g-role-head">
+                <h3>{r.name}</h3>
+                <span className="g-seats">
+                  {r.seats} {r.seats === 1 ? 'seat' : 'seats'}
+                </span>
+              </div>
               <ul>
                 {r.ready.map((x) => (
                   <li key={x}>{x}</li>
